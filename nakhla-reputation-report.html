@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نخلا | تقرير السمعة الرقمية والأداء التنافسي — عبدالله السيف</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zain:wght@400;700;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F3EA;
+  --paper-2:#EFEBDD;
+  --palm:#3D4430;
+  --sage:#8A8E6A;
+  --sage-soft:#B9BC9E;
+  --date:#5E2B1C;
+  --clay:#B0402A;
+  --gold:#C79A4B;
+  --ink:#2A2D22;
+  --line:rgba(61,68,48,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'IBM Plex Sans Arabic',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.85;
+  font-size:16px;
+}
+h1,h2,h3,.disp{font-family:'Zain',sans-serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 28px}
+
+/* ---------- COVER ---------- */
+.cover{
+  background:var(--sage);
+  color:var(--paper);
+  position:relative;
+  overflow:hidden;
+}
+.cover::after{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 45% at 15% 110%, rgba(94,43,28,.35), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 90% -10%, rgba(246,243,234,.18), transparent 60%);
+  pointer-events:none;
+}
+.cover-inner{position:relative;z-index:2;padding:64px 28px 0}
+.cover-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brandmark{
+  font-family:'Zain';font-weight:900;font-size:30px;color:var(--date);
+  background:var(--paper);padding:6px 22px 10px;border-radius:4px;letter-spacing:.5px;
+}
+.brandmark small{display:block;font-size:11px;font-weight:700;letter-spacing:4px;color:var(--sage);margin-top:-6px}
+.cover-meta{font-size:13px;text-align:left;opacity:.9;line-height:1.7}
+.cover h1{
+  font-size:clamp(40px,7vw,74px);font-weight:900;line-height:1.12;
+  margin:56px 0 22px;color:#FBF9F2;max-width:15ch;
+}
+.deadline-badge{
+  display:inline-flex;align-items:center;gap:12px;
+  background:var(--date);color:var(--paper);
+  padding:12px 22px;border-radius:99px;
+  margin-bottom:26px;box-shadow:0 8px 20px rgba(94,43,28,.35);
+}
+.deadline-badge .clock{
+  display:flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:50%;
+  background:var(--paper);color:var(--date);
+  font-family:'Zain';font-weight:900;font-size:15px;flex-shrink:0;
+}
+.deadline-badge .txt{font-size:15.5px;line-height:1.3}
+.deadline-badge .txt b{font-family:'Zain';font-weight:800;font-size:19px;color:var(--gold)}
+.cover .sub{font-size:18px;max-width:52ch;opacity:.95;font-weight:300}
+.cover .sub b{font-weight:600}
+.verdict-strip{
+  position:relative;z-index:2;
+  margin-top:52px;
+  background:var(--palm);
+  padding:26px 0;
+}
+.verdict-strip .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.v-item{border-right:1px solid rgba(246,243,234,.18);padding-right:18px;color:var(--paper)}
+.v-item:first-child{border-right:none;padding-right:0}
+.v-item .num{font-family:'Zain';font-weight:800;font-size:34px;line-height:1;color:var(--gold)}
+.v-item .num.neg{color:#E58A72}
+.v-item .lbl{font-size:12.5px;opacity:.85;margin-top:6px;line-height:1.5}
+
+/* ---------- SECTIONS ---------- */
+section{padding:72px 0 8px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Zain';font-weight:800;font-size:15px;color:var(--date);
+  letter-spacing:1px;margin-bottom:6px;
+}
+.eyebrow::before{content:"";width:34px;height:3px;background:var(--date);border-radius:2px}
+h2{font-size:clamp(28px,4vw,40px);font-weight:900;color:var(--palm);line-height:1.25;margin-bottom:14px}
+.lead{font-size:17px;max-width:70ch;color:#43483A}
+.lead b,strong{color:var(--date)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:26px 24px;
+}
+.card h3{font-size:20px;font-weight:800;color:var(--palm);margin-bottom:8px}
+.card p{font-size:14.5px;color:#4A4F40}
+.card .big{font-family:'Zain';font-weight:800;font-size:42px;color:var(--date);line-height:1}
+.card .cap{font-size:12.5px;color:#7A7E6B;margin-top:4px}
+
+.note{
+  background:var(--paper-2);
+  border-radius:12px;
+  border-right:5px solid var(--gold);
+  padding:18px 22px;
+  font-size:14.5px;
+  margin-top:26px;
+}
+.note.risk{border-right-color:var(--clay)}
+.note b{color:var(--date)}
+
+/* ---------- HERO CHART ---------- */
+.chart-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 26px;margin-top:32px}
+.chart-card h3{font-size:19px;font-weight:800;color:var(--palm)}
+.chart-card .sub3{font-size:13px;color:#7A7E6B;margin-bottom:18px}
+.legend{display:flex;gap:20px;font-size:12.5px;color:#5A5F4D;margin-top:12px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+
+/* ---------- BARS ---------- */
+.bar-row{display:grid;grid-template-columns:120px 1fr 64px;align-items:center;gap:14px;margin:12px 0;font-size:14px}
+.bar-track{background:var(--paper-2);border-radius:99px;height:16px;overflow:hidden}
+.bar-fill{height:100%;border-radius:99px;background:var(--sage)}
+.bar-fill.gold{background:var(--gold)}
+.bar-fill.clay{background:var(--clay)}
+.bar-val{font-family:'Zain';font-weight:800;color:var(--palm);text-align:left}
+
+/* ---------- RISK MATRIX ---------- */
+.risk-table{width:100%;border-collapse:collapse;margin-top:28px;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);font-size:14px}
+.risk-table th{background:var(--palm);color:var(--paper);padding:13px 16px;text-align:right;font-family:'Zain';font-weight:700;font-size:15px}
+.risk-table td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.risk-table tr:last-child td{border-bottom:none}
+.sev{display:inline-block;font-size:12px;font-weight:700;padding:3px 12px;border-radius:99px;white-space:nowrap}
+.sev.critical{background:#F6DDD6;color:var(--clay)}
+.sev.high{background:#F3E7CE;color:#8A6320}
+.sev.med{background:#E4E6D6;color:#5A5F3D}
+
+/* ---------- ACTION PLAN ---------- */
+.sprint{margin-top:30px;display:grid;gap:16px}
+.action{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:20px 22px;display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:start;
+}
+.action .day{
+  font-family:'Zain';font-weight:900;font-size:15px;color:var(--paper);
+  background:var(--date);border-radius:10px;text-align:center;padding:8px 4px;line-height:1.3;
+}
+.action .day small{display:block;font-size:10px;font-weight:400;opacity:.85}
+.action h3{font-size:17px;font-weight:800;color:var(--palm);margin-bottom:4px}
+.action p{font-size:14px;color:#4A4F40}
+.action .kpi{display:inline-block;margin-top:8px;font-size:12px;background:var(--paper-2);border-radius:99px;padding:3px 12px;color:var(--palm);font-weight:600}
+
+/* ---------- COMPETITOR TABLE ---------- */
+.comp-table{width:100%;border-collapse:collapse;margin-top:28px;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);font-size:13.5px}
+.comp-table th{background:var(--sage);color:#fff;padding:13px 14px;text-align:right;font-family:'Zain';font-weight:700;font-size:14.5px}
+.comp-table td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table tr.hero-row{background:#FBF8EE}
+.comp-table tr.hero-row td:first-child{font-weight:700;color:var(--date)}
+.stars{color:var(--gold);font-weight:800;font-family:'Zain';font-size:16px;white-space:nowrap}
+
+/* ---------- TEMPLATES ---------- */
+.tmpl{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:18px;
+}
+.tmpl .tag{font-size:12px;font-weight:700;color:#fff;background:var(--sage);border-radius:99px;padding:3px 14px;display:inline-block;margin-bottom:10px}
+.tmpl .tag.neg{background:var(--clay)}
+.tmpl blockquote{
+  font-size:14.5px;color:#3C4133;background:var(--paper-2);
+  border-radius:10px;padding:16px 18px;border-right:4px solid var(--sage);
+}
+.tmpl .why{font-size:12.5px;color:#7A7E6B;margin-top:10px}
+
+/* ---------- FOOTER ---------- */
+footer{
+  margin-top:80px;background:var(--palm);color:var(--paper);padding:44px 0;
+}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer .fb{font-family:'Zain';font-weight:900;font-size:24px}
+footer p{font-size:12.5px;opacity:.75;max-width:60ch}
+
+@media (max-width:860px){
+  .verdict-strip .wrap{grid-template-columns:repeat(2,1fr);gap:20px}
+  .v-item{border-right:none;padding-right:0}
+  .grid2,.grid3{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:90px 1fr 50px}
+  .risk-table,.comp-table{display:block;overflow-x:auto}
+}
+@media (prefers-reduced-motion:no-preference){
+  .card,.action,.tmpl{transition:transform .18s ease, box-shadow .18s ease}
+  .card:hover,.action:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(61,68,48,.10)}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================= COVER ======================= -->
+<header class="cover">
+  <div class="cover-inner wrap">
+    <div class="cover-top">
+      <div class="brandmark">نخلا<small>NAKHLA</small></div>
+      <div class="cover-meta">
+        تقرير استشاري سري — للإدارة التنفيذية · الإصدار 8<br>
+        إعداد: <b>عبدالله السيف</b> · تحديث نوفمبر 2026<br>
+        نطاق التحليل: ~أبريل 2025 (الافتتاح) – أكتوبر 2026 (بيانات نهائية)
+      </div>
+    </div>
+    <h1>سمعة تتصدّر بريدة…<br>ونافذة حرجة لتحصينها</h1>
+    <div class="deadline-badge">
+      <span class="clock">90</span>
+      <span class="txt">نافذة العمل الموصى بها: <b>90 يومًا</b> لإغلاق الملفات الحرجة قبل ذروة الموسم</span>
+    </div>
+    <p class="sub">تحليل شامل للملف التجاري على خرائط Google، وهندسة المراجعات، والموقع التنافسي لوجهة <b>نخلا</b> — مع خطة تدخّل عاجلة لمعالجة مصادر التقييمات السلبية قبل موسم الذروة القادم.</p>
+  </div>
+  <div class="verdict-strip">
+    <div class="wrap">
+      <div class="v-item"><div class="num">4.6★</div><div class="lbl">في صدارة وجهات القصيم العائلية (4,316+ مراجعة) — ومبادرة الإرث ترفعها إلى 4.7–4.8</div></div>
+      <div class="v-item"><div class="num">~2.40 مليون</div><div class="lbl">زائر تقديري منذ الافتتاح (~19 شهرًا) — بعد إضافة بيانات أكتوبر 2026</div></div>
+      <div class="v-item"><div class="num">73%</div><div class="lbl">من عمليات البحث تتم باسم العلامة مباشرة — هيمنة براند نادرة</div></div>
+      <div class="v-item"><div class="num neg">9%</div><div class="lbl">مشاعر سلبية تتركّز في 4 ملفات تشغيلية قابلة للحل</div></div>
+      <div class="v-item"><div class="num neg">−80%</div><div class="lbl">هبوط موسمي في التفاعل من ذروة يناير إلى مارس — أكبر فجوة استراتيجية</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= 01 EXEC SUMMARY ======================= -->
+<section id="exec">
+  <div class="wrap">
+    <div class="eyebrow">01 — الملخص التنفيذي</div>
+    <h2>التشخيص في سطر واحد: علامة قوية يهدّدها التشغيل، لا التسويق</h2>
+    <p class="lead">
+      نخلا اليوم في <strong>صدارة المشهد السمعي</strong> لوجهات القصيم العائلية: تقييم 4.6 يضعه على القمة متعادلًا مع أقوى منافسَين (البستان وجادة النخيل بعنيزة) ومتقدمًا على عسيب، فيما يبحث عنه 73% من الزوار بالاسم مباشرة — أي أن الوعي بالعلامة لم يعد التحدي.
+      العمل الآن على ثلاث جبهات: <strong>(1) جبهة تشغيلية</strong> لمعالجة مصادر الـ9% السلبية المتكررة (دورات المياه، الازدحام، سلوك بعض العاملين والبائعين، ملاءمة البيئة للعائلات المحافظة)، و<strong>(2) جبهة موسمية</strong> لاستعادة نحو 80% من الزخم المفقود بين يناير ومارس، و<strong>(3) جبهة كسر التعادل</strong>: مبادرة توحيد الإرث السمعي بنقل المراجعات الإيجابية من ملف <strong>Golden Hills</strong> — الاسم التجاري السابق لموقع نخلا قبل الإغلاق وإعادة التطوير والإطلاق تحت العلامة الحالية — إلى ملف نخلا الحالي، وهي المبادرة المرشحة لرفع التقييم إلى <strong>4.7–4.8</strong> وجعل نخلا الأعلى في القصيم بلا منازع.
+    </p>
+    <div class="grid3">
+      <div class="card"><div class="big">30 يوم</div><div class="cap">لإغلاق الملفات التشغيلية الأربعة الحرجة (القسم 05)</div></div>
+      <div class="card"><div class="big">~190</div><div class="cap">مراجعة سلبية (نجمة–نجمتين) قائمة اليوم تحتاج احتواءً منهجيًا</div></div>
+      <div class="card"><div class="big">×3</div><div class="cap">فرصة مضاعفة التفاعل الصيفي عبر إعادة هندسة العرض المسائي</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 02 DIGITAL PERFORMANCE ======================= -->
+<section id="digital">
+  <div class="wrap">
+    <div class="eyebrow">02 — الأداء الرقمي للملف التجاري</div>
+    <h2>326 ألف مشاهدة في آخر قراءة… وقناة موازية باسم Golden Hills لا تزال تجلب زوارًا حقيقيين</h2>
+    <p class="lead">
+      ثلاث قراءات متتالية من لوحة Google Business Profile لملف نخلا، بالإضافة إلى قناة رقمية موازية قديمة (Golden Hills) لا تزال نشطة على نفس الموقع الجغرافي:
+    </p>
+
+    <div class="grid3">
+      <div class="card">
+        <h3>أكتوبر 2025 – مارس 2026</h3>
+        <div class="bar-row"><span>المشاهدات</span><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div><span class="bar-val">306 ألف</span></div>
+        <div class="bar-row"><span>عمليات البحث</span><div class="bar-track"><div class="bar-fill" style="width:84%"></div></div><span class="bar-val">273 ألف</span></div>
+        <div class="bar-row"><span>التفاعلات</span><div class="bar-track"><div class="bar-fill gold" style="width:61%"></div></div><span class="bar-val">200 ألف</span></div>
+      </div>
+      <div class="card">
+        <h3>فبراير – يوليو 2026</h3>
+        <div class="bar-row"><span>المشاهدات</span><div class="bar-track"><div class="bar-fill" style="width:99%"></div></div><span class="bar-val">323 ألف</span></div>
+        <div class="bar-row"><span>عمليات البحث</span><div class="bar-track"><div class="bar-fill" style="width:73%"></div></div><span class="bar-val">239 ألف</span></div>
+        <div class="bar-row"><span>التفاعلات</span><div class="bar-track"><div class="bar-fill gold" style="width:67%"></div></div><span class="bar-val">217 ألف</span></div>
+      </div>
+      <div class="card">
+        <h3>مارس – أغسطس 2026 <span style="font-size:11px;color:var(--gold);font-weight:700">الأحدث</span></h3>
+        <div class="bar-row"><span>المشاهدات</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">326 ألف</span></div>
+        <div class="bar-row"><span>عمليات البحث</span><div class="bar-track"><div class="bar-fill" style="width:81%"></div></div><span class="bar-val">263 ألف</span></div>
+        <div class="bar-row"><span>التفاعلات</span><div class="bar-track"><div class="bar-fill gold" style="width:66%"></div></div><span class="bar-val">216 ألف</span></div>
+        <p class="cap" style="margin-top:10px">استقرار التفاعلات فوق 216 ألفًا لثلاث قراءات متتالية — ليس تذبذبًا عشوائيًا بل مستوى طلب راسخ.</p>
+      </div>
+    </div>
+
+    <div class="chart-card" style="border-color:#8A8E6A;background:linear-gradient(180deg,#fff,#FBF8EE)">
+      <h3>⭐ اكتشاف: قناة رقمية موازية لا تزال نشطة — Golden Hills</h3>
+      <div class="sub3">نفس الإحداثيات الجغرافية · ملف منفصل على خرائط Google · مارس – أغسطس 2026</div>
+      <div class="grid3" style="margin-top:6px">
+        <div class="card"><div class="big">33 ألف</div><div class="cap">مشاهدة</div></div>
+        <div class="card"><div class="big">14 ألف</div><div class="cap">عملية بحث</div></div>
+        <div class="card"><div class="big">7,868</div><div class="cap">تفاعل فعلي — أشخاص حقيقيون يتجهون للموقع بالاسم القديم</div></div>
+      </div>
+      <p style="margin-top:16px;font-size:14.5px">هذا الملف <strong>لم يُغلق ولم يُدمج</strong> مع ملف نخلا — لا يزال يظهر على الخرائط ويستقطب بحثًا وزيارات فعلية من أشخاص ما زالوا يعرفون الموقع باسمه القديم (تقييم 4.3★ من 2,719 مراجعة). كل تفاعل هنا هو <strong>زائر حقيقي إضافي غير محسوب في إحصائيات ملف نخلا</strong> — وهو ما يدعم مبادرة توحيد الإرث السمعي في القسم 06، ويضيف طبقة كاملة لحساب إجمالي الزوار في القسم 04.</p>
+    </div>
+
+    <div class="grid2" style="margin-top:30px">
+      <div class="card">
+        <h3>من أين يصل الزوار؟ <span style="font-size:12px;color:#7A7E6B;font-weight:400">(ملف نخلا)</span></h3>
+        <div class="bar-row"><span>خرائط Google (جوال)</span><div class="bar-track"><div class="bar-fill" style="width:96%"></div></div><span class="bar-val">96%</span></div>
+        <div class="bar-row"><span>بحث Google (جوال)</span><div class="bar-track"><div class="bar-fill" style="width:8%"></div></div><span class="bar-val">4%</span></div>
+        <div class="bar-row"><span>سطح المكتب</span><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div><span class="bar-val">0%</span></div>
+        <p style="margin-top:12px;font-size:14px">قرار الزيارة يُتخذ <strong>لحظيًا وميدانيًا من الجوال</strong>. أي صورة قديمة، تقييم سلبي حديث، أو معلومة ناقصة على الخريطة تؤثر مباشرة على قرار عائلة تقف الآن في سيارتها.</p>
+      </div>
+      <div class="card">
+        <h3>ماذا يكتب الزوار في البحث؟</h3>
+        <div class="bar-row"><span>نخلا nakhla, بريدة</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">119 ألف</span></div>
+        <div class="bar-row"><span>نخلا</span><div class="bar-track"><div class="bar-fill" style="width:47%"></div></div><span class="bar-val">56 ألف</span></div>
+        <div class="bar-row"><span>nakhla, buraydah</span><div class="bar-track"><div class="bar-fill" style="width:20%"></div></div><span class="bar-val">24 ألف</span></div>
+        <div class="bar-row"><span>restaurants</span><div class="bar-track"><div class="bar-fill clay" style="width:10%"></div></div><span class="bar-val">12 ألف</span></div>
+        <p style="margin-top:12px;font-size:14px">199 ألف بحث بالاسم مقابل 12 ألف فقط بحثًا فئويًا — <strong>هيمنة براند</strong>، لكنها تكشف ضعف الالتقاط من عبارات مثل «مطاعم بريدة» و«أماكن عائلية» التي يخطفها المنافسون.</p>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>قوة الملف التجاري 90%</b> — ممتازة، لكن الـ10% المتبقية غالبًا تشمل حقولًا عالية التأثير: الأسئلة والأجوبة، المنشورات الأسبوعية، وربط قائمة المتاجر/الأكشاك. إكمالها يرفع الالتقاط الفئوي مباشرة.
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 03 SEASONALITY ======================= -->
+<section id="season">
+  <div class="wrap">
+    <div class="eyebrow">03 — الموسمية: القصة الأهم في البيانات</div>
+    <h2>منحنى واحد يشرح كل شيء: ذروة شتوية… وهبوط حاد بعدها</h2>
+
+    <div class="chart-card">
+      <h3>تفاعل الملف التجاري شهريًا (أكتوبر 2025 – مارس 2026)</h3>
+      <div class="sub3">إعادة رسم لمنحنى لوحة Google — القيم بالألف تفاعل/شهر</div>
+      <svg viewBox="0 0 900 300" style="width:100%;height:auto" role="img" aria-label="منحنى التفاعل الشهري يوضح ذروة في ديسمبر ويناير وهبوطًا حادًا في فبراير ومارس">
+        <defs>
+          <linearGradient id="palmfill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#8A8E6A" stop-opacity=".55"/>
+            <stop offset="100%" stop-color="#8A8E6A" stop-opacity=".05"/>
+          </linearGradient>
+        </defs>
+        <!-- grid -->
+        <g stroke="rgba(61,68,48,.12)" stroke-width="1">
+          <line x1="40" y1="60" x2="860" y2="60"/><line x1="40" y1="125" x2="860" y2="125"/>
+          <line x1="40" y1="190" x2="860" y2="190"/><line x1="40" y1="255" x2="860" y2="255"/>
+        </g>
+        <g font-size="12" fill="#7A7E6B" font-family="IBM Plex Sans Arabic">
+          <text x="866" y="64">60</text><text x="866" y="129">45</text><text x="866" y="194">30</text><text x="866" y="259">15</text>
+        </g>
+        <!-- RTL: right = Oct 2025 -->
+        <path d="M860,268 L720,140 L580,72 L440,63 L300,68 L160,168 L40,242 L40,290 L860,290 Z" fill="url(#palmfill)"/>
+        <path d="M860,268 L720,140 L580,72 L440,63 L300,68 L160,168 L40,242" fill="none" stroke="#3D4430" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <g fill="#5E2B1C">
+          <circle cx="860" cy="268" r="6"/><circle cx="720" cy="140" r="6"/><circle cx="580" cy="72" r="6"/>
+          <circle cx="440" cy="63" r="7" stroke="#F6F3EA" stroke-width="2.5"/><circle cx="300" cy="68" r="6"/>
+          <circle cx="160" cy="168" r="6"/><circle cx="40" cy="242" r="7" fill="#B0402A" stroke="#F6F3EA" stroke-width="2.5"/>
+        </g>
+        <g font-size="13" fill="#43483A" font-family="IBM Plex Sans Arabic" text-anchor="middle">
+          <text x="860" y="290" dy="8">أكتوبر</text><text x="720" y="290" dy="8">نوفمبر</text><text x="580" y="290" dy="8">ديسمبر</text>
+          <text x="440" y="290" dy="8">يناير</text><text x="300" y="290" dy="8">فبراير</text><text x="160" y="290" dy="8">مارس</text><text x="55" y="290" dy="8">نهايته</text>
+        </g>
+        <g font-family="Zain" font-weight="800">
+          <text x="440" y="42" font-size="16" fill="#5E2B1C" text-anchor="middle">الذروة ~60 ألف/شهر</text>
+          <text x="95" y="222" font-size="15" fill="#B0402A" text-anchor="middle">~12 ألف</text>
+        </g>
+      </svg>
+      <div class="legend">
+        <span><span class="dot" style="background:#5E2B1C"></span>ذروة موسم شتاء القصيم (ديسمبر–يناير)</span>
+        <span><span class="dot" style="background:#B0402A"></span>الهبوط: نهاية الموسم + تحوّل أنماط الخروج في رمضان + بداية الحر</span>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>ماذا يعني هذا تجاريًا؟</h3>
+        <p>الوجهة تعمل فعليًا بنموذج «6 أشهر ذهبية + 6 أشهر خاملة». كل ريال يُستثمر في تحسين التجربة قبل أكتوبر القادم يتضاعف أثره، لأن <strong>موجة المراجعات الكبرى تُكتب في الذروة</strong> — وإذا دخلتم الموسم بنفس الملفات التشغيلية المفتوحة، ستتضاعف التعليقات السلبية مع تضاعف الزوار.</p>
+      </div>
+      <div class="card">
+        <h3>فرصة الصيف غير المستغلة</h3>
+        <p>التفاعل الصيفي لم يمت (فترة فبراير–يوليو سجلت 217 ألف تفاعل) — لكنه يحتاج عرضًا مختلفًا: فعاليات مسائية بعد المغرب، تظليل ورذاذ تبريد في الممرات، وعروض «سهرة عائلية» مجدولة. المنافسون تبنّوا النموذج المسائي صراحةً: عسيب يعمل من 5 عصرًا حتى 11 صباحًا، وجادة النخيل بعنيزة حتى الفجر مع أنظمة رذاذ تبريد يمتدحها الزوار — المطلوب مجاراة هذا النموذج وتجاوزه.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 04 REPUTATION ======================= -->
+<section id="reputation">
+  <div class="wrap">
+    <div class="eyebrow">04 — تشريح السمعة</div>
+    <h2>‏4.6 نجمة تخفي تحتها 190 مراجعة غاضبة — وكلها تقول نفس الشيء</h2>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>توزيع النجوم (4,316 مراجعة)</h3>
+        <div class="bar-row"><span>★★★★★</span><div class="bar-track"><div class="bar-fill gold" style="width:80%"></div></div><span class="bar-val">80%</span></div>
+        <div class="bar-row"><span>★★★★</span><div class="bar-track"><div class="bar-fill gold" style="width:10%"></div></div><span class="bar-val">10%</span></div>
+        <div class="bar-row"><span>★★★</span><div class="bar-track"><div class="bar-fill" style="width:5%"></div></div><span class="bar-val">5%</span></div>
+        <div class="bar-row"><span>★★</span><div class="bar-track"><div class="bar-fill clay" style="width:2%"></div></div><span class="bar-val">2%</span></div>
+        <div class="bar-row"><span>★</span><div class="bar-track"><div class="bar-fill clay" style="width:4%"></div></div><span class="bar-val">4%</span></div>
+        <p class="cap" style="margin-top:10px">المشاعر: 89% إيجابية · 3% محايدة · 9% سلبية — وتيرة المراجعات مستقرة عند ~380 مراجعة شهريًا بذروتين (يناير وأبريل ~500+).</p>
+      </div>
+      <div class="card">
+        <h3>خريطة الشكاوى المتكررة (من تحليل 100+ مراجعة)</h3>
+        <div class="bar-row"><span>دورات المياه</span><div class="bar-track"><div class="bar-fill clay" style="width:90%"></div></div><span class="bar-val">حرج</span></div>
+        <div class="bar-row"><span>الازدحام والانتظار</span><div class="bar-track"><div class="bar-fill clay" style="width:80%"></div></div><span class="bar-val">حرج</span></div>
+        <div class="bar-row"><span>الموظفون والأمن</span><div class="bar-track"><div class="bar-fill clay" style="width:65%"></div></div><span class="bar-val">مرتفع</span></div>
+        <div class="bar-row"><span>التدخين والموسيقى المرتفعة</span><div class="bar-track"><div class="bar-fill" style="width:55%"></div></div><span class="bar-val">مرتفع</span></div>
+        <div class="bar-row"><span>قلة الجلسات العامة</span><div class="bar-track"><div class="bar-fill" style="width:45%"></div></div><span class="bar-val">متوسط</span></div>
+        <div class="bar-row"><span>اللوحات والإرشاد</span><div class="bar-track"><div class="bar-fill" style="width:35%"></div></div><span class="bar-val">متوسط</span></div>
+      </div>
+    </div>
+
+    <div class="note risk">
+      <b>إشارة إنذار نوعية — وليست كمية:</b> مراجعة 23 يوليو 2026 وثّقت سلوك «التسويق بالإلحاح» من شباب كشك العطور تجاه مرتادي المسجد، وضيق مساحة المسجد، وغياب اللوحات المضيئة. الشكوى من <b>سلوك مستأجر</b> تُحسب على سمعة نخلا كاملة — الزائر لا يفرّق بين الكشك والوجهة. هذا يستدعي «ميثاق سلوك للمستأجرين» ملزمًا (القسم 05).
+    </div>
+
+    <div class="note">
+      <b>منظومة الردود — أصل قائم قيد التطوير:</b> تغطية الردود على المراجعات تُدار داخليًا عبر منظومة ذكية طوّرها فريق إدارة السمعة، وتحقق استجابة شاملة وسريعة على كامل تدفق المراجعات (~380 شهريًا) — وهي قدرة لا يملكها أي منافس في المنطقة. المرحلة التالية المعتمدة ضمن الخطة: نشر جميع الردود بهوية <b>«فريق نخلا»</b> مع أسماء أولى لممثلي الخدمة، بما يضاعف الدفء البشري المُدرَك ويرفع أثر كل رد على قرار القارئ القادم.
+    </div>
+
+    <h2 style="font-size:30px;margin-top:60px">إجمالي الزوار التقديري — منذ الافتتاح <span style="font-size:15px;font-weight:400;color:#7A7E6B">(~أبريل 2025 – أكتوبر 2026 · 19 شهرًا)</span></h2>
+    <p class="lead">تحديث هذه الدورة: أُضيف <strong>شهر أكتوبر 2026</strong> لنخلا (18,312 طلب اتجاهات مقاسة مباشرة، بمجموع <strong>36,583</strong> لفترة سبتمبر–أكتوبر) إلى النافذة الزمنية، بعد أن ثبّتنا في الدورة السابقة مؤشر <strong>«طلبات الاتجاهات» (Directions) منفردًا</strong> — أنقى مؤشر لنية الزيارة الفعلية — وبعد رصد بيانات Golden Hills الكاملة لفترة أكتوبر 2025–مارس 2026 التي كشفت حجمًا أكبر من المتوقع لتلك القناة الموازية:</p>
+
+    <div class="grid2" style="margin-top:20px">
+      <div class="card" style="text-align:center;background:#FBF8EE">
+        <div class="big" style="font-size:44px">96.8%</div>
+        <div class="cap">من إجمالي تفاعلات <b>نخلا</b> هي طلبات اتجاهات مباشرة (209 ألف من 216 ألف، مارس–أغسطس 2026) — مؤكَّدة بعينة أغسطس بعد اكتمال تجميع بياناته (31,729 طلب اتجاهات)</div>
+      </div>
+      <div class="card" style="text-align:center;background:#FBF8EE">
+        <div class="big" style="font-size:44px">87.4%</div>
+        <div class="cap">من إجمالي تفاعلات <b>Golden Hills</b> هي طلبات اتجاهات مباشرة (6,874 من 7,868، مارس–أغسطس 2026)</div>
+      </div>
+    </div>
+
+    <div class="note risk" style="margin-top:22px">
+      <b>اكتشاف مهم — Golden Hills كانت أكبر بكثير مما قُدِّر سابقًا:</b> البيانات الفعلية لفترة أكتوبر 2025–مارس 2026 تُظهر <b>41 ألف تفاعل</b> (67 ألف مشاهدة، 54 ألف بحث) — أي بمعدل ~6,833 تفاعل/شهر، مقابل ~1,311 فقط في فترة مارس–أغسطس اللاحقة. هذا يرسم صورة منطقية: Golden Hills كانت لا تزال الاسم المهيمن في وعي الجمهور خلال أشهر ما بعد الافتتاح مباشرة، ثم تراجعت تدريجيًا مع رسوخ اسم «نخلا». استخدمنا هذا المعدل الأعلى (المُقاس فعليًا) لتصحيح تقدير فترة ما قبل الرصد أيضًا، بدل الاعتماد على المعدل المتأخر الأقل.
+    </div>
+
+    <div class="grid2" style="margin-top:24px">
+      <div class="card">
+        <h3>نخلا Nakhla <span style="font-size:11px;color:#7A7E6B;font-weight:400">طلبات اتجاهات مكافئة</span></h3>
+        <div class="bar-row"><span style="font-size:13px">مقاس ومُسقَط (أكتوبر 2025–أغسطس 2026، 11 شهر)</span><div class="bar-track"><div class="bar-fill gold" style="width:74%"></div></div><span class="bar-val">372 ألف</span></div>
+        <div class="bar-row"><span style="font-size:13px">سبتمبر–أكتوبر 2026 — مقاس مباشرة (شهران)</span><div class="bar-track"><div class="bar-fill gold" style="width:7%"></div></div><span class="bar-val">36.6 ألف</span></div>
+        <div class="bar-row"><span style="font-size:13px">امتداد ما قبل الرصد (~أبريل–سبتمبر 2025، ٦ أشهر افتتاح)</span><div class="bar-track"><div class="bar-fill" style="width:19%"></div></div><span class="bar-val">97 ألف</span></div>
+        <p class="cap" style="margin-top:8px">إجمالي نخلا التقديري ≈ <b>506 ألف طلب اتجاهات</b> (~19 شهرًا) — بعد إضافة سبتمبر وأكتوبر</p>
+      </div>
+      <div class="card" style="border-color:var(--clay)">
+        <h3>Golden Hills <span style="font-size:11px;color:#7A7E6B;font-weight:400">طلبات اتجاهات مكافئة</span></h3>
+        <div class="bar-row"><span style="font-size:13px">مقاس فعليًا + مُسقَط (أكتوبر 2025–أغسطس 2026، 11 شهر)</span><div class="bar-track"><div class="bar-fill clay" style="width:54%"></div></div><span class="bar-val">41.5 ألف</span></div>
+        <div class="bar-row"><span style="font-size:13px">امتداد ما قبل الرصد (~أبريل–سبتمبر 2025، بمعدل الفترة المبكرة الأعلى)</span><div class="bar-track"><div class="bar-fill clay" style="width:46%"></div></div><span class="bar-val">35.8 ألف</span></div>
+        <p class="cap" style="margin-top:8px">إجمالي Golden Hills التقديري ≈ <b>77.4 ألف طلب اتجاهات</b> (~17 شهرًا) — لا تحديث جديد لهذه القناة هذه الدورة</p>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:24px">
+      <b>الإجمالي المُدمَج المُحدَّث لطلبات الاتجاهات (القناتان معًا، ~19 شهرًا):</b> 506 ألف + 77.4 ألف ≈ <b>583 ألف طلب اتجاهات</b> — نية سفر حقيقية موثقة، وهي الأساس الجديد لاحتساب عدد الزوار الفعليين أدناه.
+    </div>
+
+    <table class="risk-table" style="margin-top:28px">
+      <thead><tr><th>السيناريو</th><th>نسبة التحويل *</th><th>إشغال السيارة</th><th>تكرار بلا قوقل **</th><th>إجمالي الزوار (~19 شهرًا)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>متحفظ</td><td>50%</td><td>3 أفراد</td><td>+25%</td><td><b>~1.09 مليون</b></td>
+        </tr>
+        <tr class="hero-row">
+          <td><b>متوسط — الأقرب للواقع</b></td><td>57.5%</td><td>5.5 فرد</td><td>+30%</td><td><b>~2.40 مليون</b></td>
+        </tr>
+        <tr>
+          <td>متفائل</td><td>65%</td><td>8 أفراد</td><td>+40%</td><td><b>~4.24 مليون</b></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="cap" style="margin-top:8px">* نسبة تحويل طلب الاتجاهات إلى زيارة فعلية. ** يشمل الزوار الذين يترددون على الوجهة أسبوعيًا وحتى يوميًا بحكم معرفتهم المسبقة بالموقع دون أي بحث أو طلب اتجاهات في Google في تلك الزيارة المحددة — راجع الملاحظة أدناه.</p>
+
+    <div class="grid3" style="margin-top:30px">
+      <div class="card" style="text-align:center;background:var(--palm);border-color:var(--palm)">
+        <div class="big" style="color:var(--gold);font-size:52px">~2,397,200</div>
+        <div class="cap" style="color:var(--paper);opacity:.9">زائر تقريبًا منذ الافتتاح (~19 شهرًا) — السيناريو المتوسط (القناتان مجتمعتان، بعد إضافة أكتوبر 2026)</div>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="big" style="font-size:52px">~436 ألف</div>
+        <div class="cap">إجمالي عدد السيارات/المجموعات التقديري لنفس الفترة</div>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="big" style="font-size:52px">~126 ألف</div>
+        <div class="cap">متوسط شهري تقديري للزوار — يتضاعف في ذروة ديسمبر–يناير</div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:22px">
+      <b>توضيح مهم بخصوص «الزوار المتكررون بلا قوقل»:</b> هذه الفئة ليست مجرد هامش تقديري عام — هي فعليًا تضم شريحتين حقيقيتين: (أ) زوار يعودون بضع مرات في الموسم ويتذكرون الطريق فلا يحتاجون خرائط Google في كل مرة، و(ب) <strong>مرتادون شبه يوميين وأسبوعيين</strong> (سكان الحي القريب، عائلات لها اشتراك أو عادة ثابتة، موظفو المحلات المجاورة الذين يترددون خارج دوامهم) الذين لا يظهرون في أي مقياس رقمي على الإطلاق مهما طال الرصد. نسبة الـ25–40% المستخدمة هنا تحاول التقاط الشريحتين معًا بمعيار صناعي متحفظ نسبيًا؛ لو أراد نخلا رقمًا أدق لهذه الفئة تحديدًا، الحل الوحيد الموثوق هو عدّاد بوابة يُصنِّف الزيارات المتكررة يوميًا (عبر التعرف على نفس اللوحة أو بطاقة عضوية) لمدة شهر — عندها نستبدل هذا الافتراض برقم فعلي.
+    </div>
+
+    <p class="cap" style="margin-top:16px">ملاحظات منهجية: (1) نسبة تحويل طلبات الاتجاهات (50–65%) معيار صناعي لهذا المؤشر تحديدًا. (2) امتداد Golden Hills لما قبل الرصد يستخدم الآن معدل الفترة المبكرة الفعلي (أكتوبر–مارس) بدل المعدل المتأخر الأقل — تصحيح يرفع تقدير القناة الموازية بشكل كبير لكنه مبني على بيانات حقيقية لا افتراض. (3) الطريقة الوحيدة لتحويل هذا التقدير إلى رقم موثوق 100% هي عدّاد زوار عند البوابة — نوصي به بإلحاح متزايد كلما كبر الرقم المُستخدَم في القرارات التنفيذية أو ميزانيات الإعلانات.</p>
+  </div>
+</section>
+
+<!-- ======================= 05 RISK REGISTER + SPRINT ======================= -->
+<section id="plan">
+  <div class="wrap">
+    <div class="eyebrow">05 — سجل المخاطر وخطة الثلاثين يومًا</div>
+    <h2>أربعة ملفات تصنع 9% السلبية… وكلها قابلة للإغلاق قبل الموسم</h2>
+
+    <table class="risk-table">
+      <thead><tr><th>الملف</th><th>الخطورة</th><th>لماذا هو خطر على السمعة تحديدًا؟</th><th>الإجراء الحاسم</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>نظافة دورات المياه</b></td>
+          <td><span class="sev critical">حرج</span></td>
+          <td>الشكوى رقم 1 في مراجعات نخلا ومنافسيه معًا — أول ما تذكره الأمهات، وأسرع طريق لنجمة واحدة.</td>
+          <td>جدول نظافة كل 45 دقيقة بتوقيع ورقي مرئي + رمز QR «قيّم النظافة الآن» داخل كل دورة يصل للمشرف مباشرة قبل أن يصل إلى Google.</td>
+        </tr>
+        <tr>
+          <td><b>الازدحام وطوابير الانتظار</b></td>
+          <td><span class="sev critical">حرج</span></td>
+          <td>يضرب ذروة الإيراد نفسها (نهاية الأسبوع في الموسم) ويحوّل أفضل لياليكم إلى أسوأ مراجعاتكم.</td>
+          <td>مسارات دخول/خروج مفصولة، شاشة «مستوى الازدحام الآن» على الملف التجاري وستوري الحسابات، وتوسعة الجلسات العامة المجانية في المناطق الميتة.</td>
+        </tr>
+        <tr>
+          <td><b>سلوك الموظفين والأمن + بائعي الأكشاك</b></td>
+          <td><span class="sev high">مرتفع</span></td>
+          <td>شكاوى موثقة من إلحاح البيع (كشك العطور) واستجابة أمن متفاوتة — والزائر يحمّلها لاسم «نخلا».</td>
+          <td>ميثاق سلوك ملزم في عقود المستأجرين (ممنوع الاعتراض والإلحاح)، تدريب ضيافة نصف يوم للأمن، ومتسوق خفي أسبوعي يرفع تقريرًا للإدارة.</td>
+        </tr>
+        <tr>
+          <td><b>ملاءمة البيئة للعائلات المحافظة</b></td>
+          <td><span class="sev high">مرتفع</span></td>
+          <td>روائح التدخين والموسيقى المرتفعة في بعض الأركان تتعارض مع جمهور القصيم الأساسي — خطر «فقدان الهوية» أمام جمهوركم الأوفى.</td>
+          <td>تكثيف اللوحات الإرشادية «ممنوع التدخين» في كامل مسارات العائلات والجلسات العامة، مع إنفاذ فعلي من الأمن ومتابعة دورية لالتزام المستأجرين ببند عدم التدخين في عقودهم.</td>
+        </tr>
+        <tr>
+          <td><b>انتشار القطط الشاردة</b></td>
+          <td><span class="sev med">متوسط</span></td>
+          <td>ملاحظة ميدانية حديثة: كثرة القطط داخل الوجهة تسبب إزعاجًا لبعض الزوار (حساسية، قلق من الأطفال، مخاوف نظافة) — خطر ناشئ لم يظهر بعد في المراجعات لكنه قابل للتصاعد إذا لم يُعالَج.</td>
+          <td>التعاقد مع جهة متخصصة لبرنامج ضبط أعداد إنساني (تعقيم/ترحيل تدريجي)، إبعاد مصادر الغذاء العرضية (مخلفات المطاعم) عن مسارات الزوار، وتركيب حاويات مغلقة بإحكام.</td>
+        </tr>
+        <tr>
+          <td><b>الجلسات العامة والإرشاد المكاني</b></td>
+          <td><span class="sev med">متوسط</span></td>
+          <td>«ما لقينا مكان نجلس إلا إذا اشترينا» + صعوبة الاهتداء للأقسام ليلًا.</td>
+          <td>+30% مقاعد عامة مظللة، لوحات مضيئة مرقمة للأقسام، وخريطة الوجهة على مدخل رمز QR وعلى الملف التجاري.</td>
+        </tr>
+        <tr>
+          <td><b>سعة المسجد</b></td>
+          <td><span class="sev med">متوسط</span></td>
+          <td>مطلب متكرر وحساس ثقافيًا — تلبيته تُبنى عليها سمعة إيجابية مضاعفة في القصيم.</td>
+          <td>توسعة أو مصلى إضافي مؤقت (خيمة مكيفة بفرش مناسب) لموسم الذروة + سجاد وتجهيز يليق بمستوى الوجهة.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="font-size:26px;margin-top:56px">سبرنت الثلاثين يومًا</h2>
+    <div class="sprint">
+      <div class="action">
+        <div class="day">1–3<small>أيام</small></div>
+        <div>
+          <h3>إطلاق هوية «فريق نخلا» في الردود</h3>
+          <p>ترقية منظومة الردود القائمة بتفعيل توقيع موحد «فريق نخلا» مع أسماء أولى لممثلي الخدمة، ومراجعة آخر 50 ردًا لتخصيص الردود على المراجعات السلبية البارزة بجملة من نص كل مراجعة — لرفع الأثر المُدرَك دون المساس بسرعة التغطية الحالية.</p>
+          <span class="kpi">المؤشر: 100% من الردود الجديدة بتوقيع فريق نخلا</span>
+        </div>
+      </div>
+      <div class="action">
+        <div class="day">4–10<small>أيام</small></div>
+        <div>
+          <h3>حملة «دورات مياه بمستوى فندقي»</h3>
+          <p>تكثيف الجدولة، توقيع مرئي كل 45 دقيقة، QR داخلي للتبليغ الفوري، وتصوير احترافي للنتيجة يُنشر على الملف التجاري — اقلبوا نقطة الضعف الأولى إلى مادة تسويقية.</p>
+          <span class="kpi">المؤشر: صفر مراجعة نظافة سلبية جديدة خلال 30 يومًا</span>
+        </div>
+      </div>
+      <div class="action">
+        <div class="day">7–14<small>أيام</small></div>
+        <div>
+          <h3>ميثاق سلوك المستأجرين + تدريب الأمن</h3>
+          <p>ملحق تعاقدي من صفحة واحدة: ممنوع اعتراض الزوار أو الإلحاح، غرامة تصاعدية، وإنهاء عند التكرار. ورشة ضيافة نصف يوم لفريق الأمن مع سيناريوهات (شكوى، طفل تائه، مشادة).</p>
+          <span class="kpi">المؤشر: توقيع 100% من الأكشاك + متسوق خفي أسبوعي</span>
+        </div>
+      </div>
+      <div class="action">
+        <div class="day">10–21<small>أيام</small></div>
+        <div>
+          <h3>حملة تكثيف لوحات منع التدخين</h3>
+          <p>تركيب لوحات إرشادية «ممنوع التدخين» بشكل مكثف وواضح على كامل مسارات العائلات والجلسات العامة ومداخل الأقسام، مع تفعيل إنفاذ فعلي من فريق الأمن ومتابعة التزام المستأجرين ببند عدم التدخين التعاقدي.</p>
+          <span class="kpi">المؤشر: انخفاض شكاوى التدخين/الروائح 70%</span>
+        </div>
+      </div>
+      <div class="action">
+        <div class="day">14–30<small>أيام</small></div>
+        <div>
+          <h3>تفعيل ماكينة المراجعات الإيجابية</h3>
+          <p>‏80% من زواركم راضون لكن معظمهم لا يكتب. رمز QR على كل طاولة وفاتورة: «شاركنا تجربتك في 20 ثانية» يقود لصفحة المراجعة مباشرة. الهدف رفع الوتيرة من 380 إلى 600+ مراجعة/شهر — كل مراجعة إيجابية جديدة تدفن واحدة سلبية أعمق.</p>
+          <span class="kpi">المؤشر: 600 مراجعة/شهر و«آخر 10 مراجعات» كلها 4★ فأعلى</span>
+        </div>
+      </div>
+      <div class="action">
+        <div class="day">21–30<small>أيام</small></div>
+        <div>
+          <h3>سد فجوة البحث الفئوي</h3>
+          <p>تحديث وصف الملف وخدماته بعبارات: وجهة عائلية، حديقة حيوانات صغيرة، مقاهي ومطاعم، فعاليات — ومنشور أسبوعي ثابت + ربط ملفات المستأجرين (قوستو جيلاتو 4.8★ وهانم) كأصول داعمة تشير إلى نخلا.</p>
+          <span class="kpi">المؤشر: نمو البحث غير المرتبط بالاسم من 12 ألف إلى 25 ألف</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 06 COMPETITORS ======================= -->
+<section id="competitors">
+  <div class="wrap">
+    <div class="eyebrow">06 — المشهد التنافسي في القصيم</div>
+    <h2>تعادل ثلاثي على القمة عند 4.6 — ومبادرة الإرث هي كاسر التعادل</h2>
+    <p class="lead">المنافسون الفعليون لنخلا هم وجهات «المزارع المحوّلة» الكبرى في المنطقة: <strong>عسيب</strong> و<strong>البستان</strong> في بريدة، و<strong>جادة النخيل</strong> في عنيزة التي تسحب زوار القصيم بأكمله (بيانات خرائط Google — يوليو 2026):</p>
+
+    <table class="comp-table">
+      <thead><tr><th>الوجهة</th><th>التقييم</th><th>المراجعات</th><th>النموذج وساعات العمل</th><th>ما نتعلمه / ما نستغله</th></tr></thead>
+      <tbody>
+        <tr class="hero-row">
+          <td>نخلا Nakhla</td><td class="stars">4.6★</td><td>4,316</td>
+          <td>منتجع عائلي: مقاهٍ ومطاعم + حديقة حيوانات + فعاليات · 24 ساعة</td>
+          <td>الوحيد العامل على مدار الساعة — ميزة غير مسوَّقة إعلانيًا حتى الآن.</td>
+        </tr>
+        <tr>
+          <td><b>عسيب Asib</b> — بريدة</td><td class="stars">4.5★</td><td>5,882</td>
+          <td>جادة مزرعة: مقاهٍ ومطاعم وألعاب أطفال ومحمية طيور · 5م–11ص</td>
+          <td>أكبر قاعدة مراجعات في بريدة لكن بتقييم أدنى. نقاط استغلال: أزمة مواقف نهاية الأسبوع وفاليه بـ50 ريالًا، شح الجلسات في الممرات، وتفاوت جودة المنافذ (أحد مقاهيه الرئيسية عند 3.8★).</td>
+        </tr>
+        <tr>
+          <td><b>البستان AL BUSTAN</b> — بريدة</td><td class="stars">4.6★</td><td>1,571</td>
+          <td>حديقة طيور وجداول مياه ومقاهٍ · فترتان: 5ص–12م و3م–2ص</td>
+          <td>يجاريكم بالتقييم لكن بخُمس قاعدة المراجعات — التفوق عليه بالحجم مضمون. ما يستحق الدراسة: <b>الفترة الصباحية</b> ولفتات الضيافة (قهوة ترحيبية) التي تتحول لمراجعات إيجابية.</td>
+        </tr>
+        <tr>
+          <td><b>جادة النخيل</b> — عنيزة</td><td class="stars">4.6★</td><td>5,706+</td>
+          <td>معلم سياحي إقليمي: منافذ طعام وممرات نخيل وأنظمة رذاذ · 5:30م–5:30ص</td>
+          <td>الخصم الإقليمي الأثقل (ملفان يتجاوزان 9,800 مراجعة مجتمعَين). نقاط استغلال موثقة: <b>رسوم دورات المياه 3.5 ريال</b> أثارت استياءً واسعًا، قلة عدد الدورات، شكاوى نظافة المفروشات، أسعار منافذ مرتفعة، وتفاوت في الخدمة.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>قراءة الاستشاري: المعركة معركة القصيم لا بريدة</h3>
+        <p>جادة النخيل بعنيزة تسحب نية البحث الإقليمية («وين أروح بالقصيم») بقاعدة مراجعات تقارب 9,800 عبر ملفَيها، وعسيب يملك أعلى صخب محلي في بريدة. الرد الاستراتيجي مزدوج: <strong>الاعتمادية التشغيلية</strong> (نظافة ومقعد وهدوء مضمون في كل زيارة — وهي ما تقيسه المراجعات وأصعب ما يُقلَّد) + <strong>شراء الظهور في نية البحث الإقليمية</strong> عبر خطة الإعلانات في القسم 07. ولاحظوا: رسوم دورات المياه عند الخصم الإقليمي هي أكثر شكوى تكرارًا لديه — إبقاؤها مجانية ونظيفة بمستوى فندقي عندكم هو رسالة تفوّق تُكتب في المراجعات مجانًا.</p>
+      </div>
+      <div class="card">
+        <h3>كاسر التعادل: مبادرة توحيد الإرث السمعي مع Golden Hills ⭐</h3>
+        <p>موقع نخلا الحالي كان يعمل سابقًا تحت الاسم التجاري <strong>Golden Hills</strong> قبل الإغلاق وإعادة التطوير الكامل وإعادة الإطلاق باسم «نخلا» (الافتتاح التقريبي ~أبريل 2025). ملف Golden Hills القديم على خرائط Google ما زال قائمًا ونشطًا فعليًا — بتقييم <strong>4.3★ من 2,719 مراجعة</strong> وحركة تفاعل حقيقية مستمرة حتى اليوم (تفاصيلها في القسم 02). توصّل فريق إدارة السمعة إلى <strong>مسار معتمد لنقل هذه المراجعات الإيجابية إلى ملف نخلا الحالي</strong> عبر إجراءات ومرافعات رسمية مع الفريق الداخلي المختص في Google (توثيق استمرارية النشاط التجاري في الموقع الجغرافي نفسه). الأثر المتوقع: قفزة التقييم من <strong>4.6 إلى 4.7–4.8</strong> ودمج قاعدة تقارب 2,719 مراجعة إضافية — ما يفكّ التعادل الثلاثي ويجعل نخلا الأعلى تقييمًا وأكبر قاعدة مراجعات في القصيم بلا منازع. <strong>الحالة: جاهزة للمباشرة فور موافقة الإدارة التنفيذية.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 07 GOOGLE ADS ======================= -->
+<section id="ads">
+  <div class="wrap">
+    <div class="eyebrow">07 — خطة إعلانات Google للملف التجاري</div>
+    <h2>لماذا الإعلانات الآن؟ لأن 96% من زواركم يقررون من الخريطة</h2>
+    <p class="lead">
+      بياناتكم تقول إن معركة الزائر تُحسم على شاشة جوال أمام خرائط Google. الحملات المدفوعة هنا ليست «رفاهية تسويقية» بل تؤدي ثلاث وظائف استراتيجية لا يحققها المحتوى العضوي وحده:
+      <strong>(1) الظهور المضمون أعلى الخريطة</strong> لحظة اتخاذ القرار عبر الدبوس المروَّج،
+      <strong>(2) شراء الفجوة الفئوية</strong> — 12 ألف بحث فقط غير مرتبط بالاسم مقابل 199 ألفًا بالاسم يعني أن سوق «مطاعم بريدة» و«أماكن عائلية بالقصيم» شبه متروك للمنافسين،
+      و<strong>(3) تسطيح منحنى الموسمية</strong> ودفع البرنامج المسائي الصيفي، مع حماية اسم «نخلا» من مزايدة أي منافس عليه.
+    </p>
+
+    <table class="comp-table">
+      <thead><tr><th>الحملة</th><th>الهدف</th><th>الاستهداف</th><th>حصة الميزانية</th></tr></thead>
+      <tbody>
+        <tr class="hero-row">
+          <td><b>Performance Max — الأهداف المحلية</b><br><span style="font-size:11.5px;color:#7A7E6B">مرتبطة مباشرة بالملف التجاري (Location Assets)</span></td>
+          <td>طلبات الاتجاهات والمكالمات + الدبوس المروَّج على الخرائط وظهور بارز في حزمة الخريطة</td>
+          <td>نطاق 40 كم حول بريدة يشمل عنيزة والرس والمذنب</td>
+          <td><b>45%</b></td>
+        </tr>
+        <tr>
+          <td><b>بحث — الالتقاط الفئوي</b></td>
+          <td>خطف نية البحث العامة: «أماكن عائلية بريدة»، «مطاعم بريدة»، «وين أروح بالقصيم»، «حدائق القصيم»، «جلسات عوائل»</td>
+          <td>القصيم + مضاعف عروض أسعار +20% على عنيزة لسحب جمهور الخصم الإقليمي</td>
+          <td><b>30%</b></td>
+        </tr>
+        <tr>
+          <td><b>بحث — حماية العلامة</b></td>
+          <td>مطابقة تامة على «نخلا» و«نخلا بريدة» لضمان الصدارة ومنع اعتراض المنافسين لأرخص نقراتكم (تكلفة نقرة شبه رمزية)</td>
+          <td>المملكة — تركيز القصيم</td>
+          <td><b>10%</b></td>
+        </tr>
+        <tr>
+          <td><b>Demand Gen — يوتيوب شورتس وDiscover</b></td>
+          <td>فيديو أجواء المساء بين النخيل (15–20 ثانية) لإطلاق الفعاليات والمواسم وبناء الطلب قبل الذروة</td>
+          <td>عائلات القصيم 25–54 + جماهير مشابهة لزوار الملف</td>
+          <td><b>15%</b></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="font-size:26px;margin-top:56px">الميزانيات المقترحة (ريال سعودي)</h2>
+    <div class="grid3">
+      <div class="card">
+        <h3>خارج الموسم<br><span style="font-size:13px;font-weight:400;color:#7A7E6B">أبريل – أغسطس</span></h3>
+        <div class="big">4–6 آلاف</div>
+        <div class="cap">شهريًا — حضور دائم على الخريطة + دفع البرنامج المسائي الصيفي ومكافحة الخمول الموسمي</div>
+      </div>
+      <div class="card">
+        <h3>بناء الزخم<br><span style="font-size:13px;font-weight:400;color:#7A7E6B">سبتمبر – أكتوبر</span></h3>
+        <div class="big">9–12 ألف</div>
+        <div class="cap">شهريًا — تجهيز الوعي قبل الموسم وملء «آخر المراجعات» بتجارب إيجابية حديثة</div>
+      </div>
+      <div class="card">
+        <h3>ذروة الموسم<br><span style="font-size:13px;font-weight:400;color:#7A7E6B">نوفمبر – فبراير</span></h3>
+        <div class="big">18–25 ألف</div>
+        <div class="cap">شهريًا — بتكلفة مستهدفة 1.5–3 ريال لطلب الاتجاهات، أي 8–12 ألف طلب اتجاهات إضافي شهريًا</div>
+      </div>
+    </div>
+
+    <h2 style="font-size:26px;margin-top:56px">منهجية التحسين المستمر</h2>
+    <div class="sprint">
+      <div class="action">
+        <div class="day">1<small>القياس</small></div>
+        <div>
+          <h3>الربط والقياس قبل أول ريال</h3>
+          <p>ربط الملف التجاري بحساب Google Ads (أصول الموقع الجغرافي)، واعتماد التحويلات: طلبات الاتجاهات + المكالمات + نقرات القائمة، وتفعيل قياس «زيارات المتجر» فور تأهل الحساب — لأن ما لا يُقاس لا يُحسَّن.</p>
+        </div>
+      </div>
+      <div class="action">
+        <div class="day">2<small>الجدولة</small></div>
+        <div>
+          <h3>جدولة تطابق سلوك الزائر</h3>
+          <p>تركيز 70% من العرض بين 4 عصرًا و1 صباحًا، ومضاعفات على الخميس–السبت — مع تحول رمضاني كامل نحو ما بعد التراويح حتى السحور.</p>
+        </div>
+      </div>
+      <div class="action">
+        <div class="day">3<small>التنقية</small></div>
+        <div>
+          <h3>كلمات سالبة أسبوعيًا</h3>
+          <p>استبعاد أسبوعي لاستعلامات الهدر (وظائف، شقق للإيجار، أسماء مشابهة خارج القصيم) من تقرير مصطلحات البحث — عادةً يوفر 15–20% من الميزانية خلال أول شهرين.</p>
+        </div>
+      </div>
+      <div class="action">
+        <div class="day">4<small>الأصول</small></div>
+        <div>
+          <h3>تحديث إبداعي شهري + اختبار A/B</h3>
+          <p>نسختان إعلانيتان متنافستان دائمًا (زاوية «الأجواء بين النخيل» مقابل زاوية «كل شيء في مكان واحد»)، وصور محدثة بموسمها — الإعلان بصورة شتوية في يوليو يقتل النقر.</p>
+        </div>
+      </div>
+      <div class="action">
+        <div class="day">5<small>المراجعة</small></div>
+        <div>
+          <h3>حوكمة شهرية أمام الإدارة</h3>
+          <p>تقرير شهري: تكلفة طلب الاتجاهات، حصة الظهور مقابل عسيب وجادة النخيل، وإعادة توزيع الميزانية نحو الحملة الأفضل أداءً — القرار بالأرقام لا بالانطباع.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="note risk">
+      <b>شرط نجاح لا يقبل التفاوض:</b> الإعلان يشتري الظهور، لكن المراجعات تحسم النقرة — الزائر يرى الدبوس المروَّج <b>وبجانبه التقييم وأحدث المراجعات</b>. لذلك تُفعَّل الميزانيات الكبرى بعد إغلاق الملفات التشغيلية في القسم 05؛ ضخ آلاف الزوار على تجربة غير جاهزة يعني شراء التقييمات السلبية بأموال الإعلانات.
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 08 RESPONSE PLAYBOOK ======================= -->
+<section id="playbook">
+  <div class="wrap">
+    <div class="eyebrow">08 — دليل الردود الاحترافي</div>
+    <h2>كل رد على مراجعة هو إعلان مجاني يقرؤه آلاف المترددين</h2>
+    <p class="lead">القاعدة الذهبية: الرد يُكتب للـ<strong>قارئ القادم</strong> قبل صاحب المراجعة. قوالب جاهزة بهوية «فريق نخلا» — تُخصَّص بجملة واحدة من نص المراجعة قبل النشر (ممنوع النسخ الحرفي المتكرر):</p>
+
+    <div class="tmpl">
+      <span class="tag neg">شكوى نظافة</span>
+      <blockquote>حياك الله أبا فلان، وكلامك في محله ونعتذر لك بصدق. تم رفع ملاحظتك لمشرف النظافة مباشرة، واعتمدنا جدول تعقيم كل 45 دقيقة مع متابعة موقّعة داخل كل دورة مياه. زيارتك القادمة علينا نثبت لك الفرق — تواصل معنا قبلها وسنستقبلك شخصيًا. — محمد، فريق نخلا</blockquote>
+      <div class="why">لماذا ينجح: اعتذار محدد + إجراء ملموس بتوقيت + دعوة عودة شخصية + اسم بشري.</div>
+    </div>
+
+    <div class="tmpl">
+      <span class="tag neg">شكوى ازدحام / انتظار</span>
+      <blockquote>أهلًا بك، ومعك حق — ليالي نهاية الأسبوع في الموسم تشهد إقبالًا كبيرًا ولله الحمد، لكن هذا لا يبرر تجربة غير مريحة. وسّعنا الجلسات العامة وفصلنا مسارات الدخول، وننصح بزيارة الأحد–الأربعاء لتجربة أهدأ. نتشرف بك دائمًا. — سارة، فريق نخلا</blockquote>
+      <div class="why">لماذا ينجح: يحوّل الازدحام لدليل شعبية، يقدم حلًا عمليًا (توقيت بديل)، ويوثق التحسين.</div>
+    </div>
+
+    <div class="tmpl">
+      <span class="tag neg">شكوى سلوك موظف أو بائع كشك</span>
+      <blockquote>نشكرك على صراحتك، وما ذكرته لا يمثل ضيافة نخلا ولا نقبله. تم التحقق من الواقعة مع الجهة المعنية واتخاذ الإجراء اللازم، وأصبح لدى جميع العاملين والمحلات ميثاق تعامل ملزم. نعتذر لك ونرحب بك ضيفًا عزيزًا دائمًا. — عبدالعزيز، فريق نخلا</blockquote>
+      <div class="why">لماذا ينجح: حزم بلا تشهير، ويطمئن القارئ القادم أن الإدارة تُنفّذ لا تُجامل.</div>
+    </div>
+
+    <div class="tmpl">
+      <span class="tag">مراجعة إيجابية (5★)</span>
+      <blockquote>الله يحييك، أسعدنا وصفك للأجواء بين النخيل 🌴 وننقل ثناءك لفريق المقاهي بالاسم. ننتظرك في فعاليات الموسم القادم — وستجد الجديد دائمًا. — فريق نخلا</blockquote>
+      <div class="why">لماذا ينجح: قصير، يلتقط تفصيلة من كلام الزائر، ويزرع سبب زيارة قادمة. الرد على الإيجابي يرفع وتيرة المراجعات الجديدة.</div>
+    </div>
+
+    <div class="note">
+      <b>اتفاقية مستوى الردود (SLA):</b> المراجعات السلبية (1–3★) خلال <b>6 ساعات</b> · الإيجابية خلال 48 ساعة · أي مراجعة تذكر «نظافة» أو «أمن» أو «أطفال» تُصعَّد فورًا لمدير التشغيل قبل الرد.
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 08 KPIs ======================= -->
+<section id="kpis">
+  <div class="wrap">
+    <div class="eyebrow">09 — لوحة قياس التسعين يومًا</div>
+    <h2>ما لا يُقاس لا يتحسن: ستة مؤشرات تحكم على نجاح الخطة</h2>
+    <div class="grid3">
+      <div class="card"><h3>التقييم العام</h3><div class="big">4.6 → 4.7+</div><div class="cap">عضويًا — وقفزة إلى 4.8 مع اكتمال مبادرة نقل مراجعات الإرث</div></div>
+      <div class="card"><h3>وتيرة المراجعات</h3><div class="big">380 → 600</div><div class="cap">مراجعة شهريًا عبر حملة QR</div></div>
+      <div class="card"><h3>نسبة السلبية</h3><div class="big">9% → 5%</div><div class="cap">مع صفر شكوى نظافة متكررة</div></div>
+      <div class="card"><h3>سرعة الرد على السلبي</h3><div class="big">&lt; 6 ساعات</div><div class="cap">بهوية بشرية 100%</div></div>
+      <div class="card"><h3>البحث الفئوي</h3><div class="big">12 → 25 ألف</div><div class="cap">التقاط عبارات «مطاعم/أماكن عائلية بريدة»</div></div>
+      <div class="card"><h3>تفاعل خارج الموسم</h3><div class="big">+50%</div><div class="cap">صيف 2026 مقابل ربيع 2026 عبر البرنامج المسائي</div></div>
+    </div>
+
+    <div class="note">
+      <b>الخطوة التالية المقترحة:</b> ورشة عمل تنفيذية (90 دقيقة) مع إدارة نخلا لاعتماد ثلاثة قرارات: سبرنت الثلاثين يومًا، والموافقة على المباشرة في مبادرة نقل مراجعات Golden Hills (الإرث) إلى ملف نخلا مع الفريق الداخلي لـGoogle، وإقرار ميزانية الإعلانات — تليها مراجعة أسبوعية للمؤشرات يقدمها عبدالله السيف ضمن عقد إدارة سمعة وأداء شهري.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="fb">عبدالله السيف</div>
+      <p>تقرير استشاري مُعد بناءً على بيانات لوحة Google Business Profile المقدمة من العميل (أكتوبر 2025 – أكتوبر 2026، آخر تحديث: المراجعات 8 نوفمبر 2026، واتجاهات Google 31 أكتوبر 2026) ومسح تنافسي عبر خرائط Google بتاريخ نوفمبر 2026 شمل: عسيب، البستان، وجادة النخيل بعنيزة. الأرقام التقديرية والميزانيات الإعلانية معلَّمة بوضوح ولأغراض التخطيط. الإصدار 8.</p>
+    </div>
+    <div style="text-align:left;font-size:13px;opacity:.85">نخلا Nakhla · حي رواق، بريدة<br>القصيم — المملكة العربية السعودية</div>
+  </div>
+</footer>
+
+</body>
+</html>
